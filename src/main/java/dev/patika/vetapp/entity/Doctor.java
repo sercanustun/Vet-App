@@ -5,10 +5,7 @@ import dev.patika.vetapp.base.City;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.time.LocalDate;
 import java.util.List;
-
-import static jakarta.persistence.EnumType.STRING;
 
 
 @Entity
@@ -29,9 +26,8 @@ public class Doctor extends BaseEntity {
     @Column(nullable = false)
     @Enumerated(value = EnumType.STRING)
     private City city;
-    @OneToMany(mappedBy = "doctor",orphanRemoval = true)
+    @OneToMany(mappedBy = "doctor", orphanRemoval = true)
     private List<Appointment> appointments;
-    @OneToMany(orphanRemoval = true)
-    @JoinColumn(name = "doctor_id")
+    @OneToMany(mappedBy = "doctor", orphanRemoval = true)
     private List<AvailableDate> availableDates;
 }
