@@ -1,0 +1,36 @@
+volumes:
+  db:
+
+networks:
+  back-tier:
+
+services:
+  mysql:
+    image: mysql:8.0-debian
+    container_name: vet-app-mysql
+    restart: unless-stopped
+    ports:
+      - "3306:3306"
+    volumes:
+      - db:/var/lib/mysql
+    environment:
+      MYSQL_DATABASE: vet-app
+      MYSQL_ROOT_PASSWORD: root
+      SERVICE_NAME: mysql
+    tty: true
+    networks:
+      - back-tier
+  phpmyadmin:
+    container_name: vet-app-phpmyadmin
+    environment:
+      - PMA_PMADB=vet-app
+      - PMA_HOST=mysql
+      - PMA_PORT=3306
+    depends_on:
+      - mysql
+    image: phpmyadmin
+    restart: unless-stopped
+    networks:
+      - back-tier
+    ports:
+      - 3010:80
