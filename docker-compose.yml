@@ -5,6 +5,18 @@ networks:
   back-tier:
 
 services:
+  app:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    container_name: app
+    ports:
+      - "8080:8080"
+    networks:
+      - back-tier
+    profiles:
+      - prod
+    restart: always
   mysql:
     image: mysql:8.0-debian
     container_name: vet-app-mysql
@@ -20,6 +32,9 @@ services:
     tty: true
     networks:
       - back-tier
+    profiles:
+      - dev
+      - prod
   phpmyadmin:
     container_name: vet-app-phpmyadmin
     environment:
@@ -32,5 +47,8 @@ services:
     restart: unless-stopped
     networks:
       - back-tier
+    profiles:
+      - dev
+      - prod
     ports:
       - 3010:80
