@@ -38,7 +38,8 @@ docker compose --profile {dev/prod} up -d --build
 
 Flyway was used for the sample database and when the application first gets up Sample data will be migrated
 automatically.
-Sample Curl With RsqlFilter
+
+## Sample Curl With RsqlFilter
 
 ```
 curl -X 'GET' \
