@@ -2,7 +2,7 @@ package dev.patika.vetapp.dto;
 
 import lombok.*;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @Getter
 @Setter
@@ -11,7 +11,7 @@ import java.time.LocalDate;
 @Builder
 public class AppointmentResponse {
     private String id;
-    private LocalDate appointmentDate;
-    private AnimalResponse animal;
-    private DoctorResponse doctor;
+    private LocalDateTime appointmentDate;
+    private AnimalWithoutRelations animal;
+    private DoctorWithoutRelations doctor;
 }

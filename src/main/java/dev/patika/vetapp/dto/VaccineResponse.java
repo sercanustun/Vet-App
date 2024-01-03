@@ -15,5 +15,5 @@ public class VaccineResponse {
     private String code;
     private LocalDate protectionStartDate;
     private LocalDate protectionEndDate;
-    private AnimalResponse animal;
+    private AnimalWithoutRelations animal;
 }

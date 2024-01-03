@@ -14,5 +14,5 @@ public class VaccineRequest {
     private String code;
     private LocalDate protectionStartDate;
     private LocalDate protectionEndDate;
-    private AnimalRequest animal;
+    private AnimalWithoutRelations animal;
 }

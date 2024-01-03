@@ -7,8 +7,7 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import lombok.*;
 
-import javax.print.Doc;
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @Entity
 @Getter
@@ -18,7 +17,7 @@ import java.time.LocalDate;
 @Builder
 public class Appointment extends BaseEntity {
     @Column(nullable = false)
-    private LocalDate appointmentDate;
+    private LocalDateTime appointmentDate;
 
     @ManyToOne
     @JoinColumn(name = "animal_id")

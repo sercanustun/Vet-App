@@ -2,7 +2,7 @@ package dev.patika.vetapp.dto;
 
 import lombok.*;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @Getter
 @Setter
@@ -10,7 +10,7 @@ import java.time.LocalDate;
 @NoArgsConstructor
 @Builder
 public class AppointmentRequest {
-    private LocalDate appointmentDate;
-    private AnimalRequest animal;
-    private DoctorRequest doctor;
+    private LocalDateTime appointmentDate;
+    private AnimalWithoutRelations animal;
+    private DoctorWithoutRelations doctor;
 }

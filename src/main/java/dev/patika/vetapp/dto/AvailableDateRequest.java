@@ -11,5 +11,5 @@ import java.time.LocalDate;
 @Builder
 public class AvailableDateRequest {
     private LocalDate date;
-    private DoctorRequest doctor;
+    private DoctorWithoutRelations doctor;
 }
