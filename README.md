@@ -48,5 +48,6 @@ curl -X 'GET' \
 ```
 
 FAQ [rsql-jpa-specification](https://github.com/perplexhub/rsql-jpa-specification)
+
 With the curl request above, you can get appointments with doctor id 0311cde6-d6b6-41de-a6c4-9c40a007dbd9 and
 appointmentDate between 2023-12-31T03:00:00 and 2024-12-31T03:00:00.
