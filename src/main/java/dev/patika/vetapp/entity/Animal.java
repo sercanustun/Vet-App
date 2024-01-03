@@ -1,5 +1,6 @@
 package dev.patika.vetapp.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import dev.patika.vetapp.base.BaseEntity;
 import jakarta.persistence.*;
 import lombok.*;
@@ -32,9 +33,11 @@ public class Animal extends BaseEntity {
     @JoinColumn(name = "customer_id")
     private Customer customer;
 
-    @OneToMany(mappedBy = "animal",orphanRemoval = true)
+    @OneToMany(mappedBy = "animal", orphanRemoval = true)
+    @JsonIgnore
     private List<Vaccine> vaccines;
 
-    @OneToMany(mappedBy = "animal",orphanRemoval = true)
+    @OneToMany(mappedBy = "animal", orphanRemoval = true)
+    @JsonIgnore
     private List<Appointment> appointments;
 }

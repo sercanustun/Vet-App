@@ -1,5 +1,6 @@
 package dev.patika.vetapp.dto;
 
+import dev.patika.vetapp.entity.Animal;
 import lombok.*;
 
 import java.time.LocalDate;
@@ -14,5 +15,5 @@ public class VaccineRequest {
     private String code;
     private LocalDate protectionStartDate;
     private LocalDate protectionEndDate;
-    private AnimalWithoutRelations animal;
+    private Animal animal;
 }

@@ -1,5 +1,6 @@
 package dev.patika.vetapp.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import dev.patika.vetapp.base.BaseEntity;
 import dev.patika.vetapp.base.City;
 import jakarta.persistence.*;
@@ -25,6 +26,7 @@ public class Customer extends BaseEntity {
     @Enumerated(value = EnumType.STRING)
     @Column(nullable = false)
     private City city;
-    @OneToMany(mappedBy = "customer",orphanRemoval = true)
+    @OneToMany(mappedBy = "customer", orphanRemoval = true)
+    @JsonIgnore
     private List<Animal> animals;
 }

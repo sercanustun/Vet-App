@@ -1,5 +1,7 @@
 package dev.patika.vetapp.dto;
 
+import dev.patika.vetapp.entity.Animal;
+import dev.patika.vetapp.entity.Doctor;
 import lombok.*;
 
 import java.time.LocalDateTime;
@@ -11,6 +13,6 @@ import java.time.LocalDateTime;
 @Builder
 public class AppointmentRequest {
     private LocalDateTime appointmentDate;
-    private AnimalWithoutRelations animal;
-    private DoctorWithoutRelations doctor;
+    private Animal animal;
+    private Doctor doctor;
 }

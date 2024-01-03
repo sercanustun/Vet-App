@@ -1,9 +1,9 @@
 package dev.patika.vetapp.dto;
 
+import dev.patika.vetapp.entity.Customer;
 import lombok.*;
 
 import java.time.LocalDate;
-import java.util.List;
 
 
 @Getter
@@ -19,7 +19,5 @@ public class AnimalResponse {
     private String gender;
     private String color;
     private LocalDate dateOfBirth;
-    private CustomerWithoutRelations customer;
-    private List<VaccineResponse> vaccines;
-    private List<AppointmentResponse> appointments;
+    private Customer customer;
 }

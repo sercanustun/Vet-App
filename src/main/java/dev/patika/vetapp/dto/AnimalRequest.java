@@ -1,5 +1,6 @@
 package dev.patika.vetapp.dto;
 
+import dev.patika.vetapp.entity.Customer;
 import lombok.*;
 
 import java.time.LocalDate;
@@ -17,5 +18,5 @@ public class AnimalRequest {
     private String gender;
     private String color;
     private LocalDate dateOfBirth;
-    private CustomerWithoutRelations customer;
+    private Customer customer;
 }

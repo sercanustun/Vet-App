@@ -21,7 +21,7 @@ public class Vaccine extends BaseEntity {
     @Column(nullable = false)
     private String code;
     @Column(nullable = false)
-    private LocalDate  protectionStartDate;
+    private LocalDate protectionStartDate;
     @Column(nullable = false)
     private LocalDate protectionEndDate;
 

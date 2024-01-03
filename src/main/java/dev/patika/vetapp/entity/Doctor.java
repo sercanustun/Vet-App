@@ -1,5 +1,6 @@
 package dev.patika.vetapp.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import dev.patika.vetapp.base.BaseEntity;
 import dev.patika.vetapp.base.City;
 import jakarta.persistence.*;
@@ -29,5 +30,6 @@ public class Doctor extends BaseEntity {
     @OneToMany(mappedBy = "doctor", orphanRemoval = true)
     private List<Appointment> appointments;
     @OneToMany(mappedBy = "doctor", orphanRemoval = true)
+    @JsonIgnore
     private List<AvailableDate> availableDates;
 }

@@ -1,5 +1,6 @@
 package dev.patika.vetapp.dto;
 
+import dev.patika.vetapp.entity.Doctor;
 import lombok.*;
 
 import java.time.LocalDate;
@@ -11,5 +12,5 @@ import java.time.LocalDate;
 @Builder
 public class AvailableDateRequest {
     private LocalDate date;
-    private DoctorWithoutRelations doctor;
+    private Doctor doctor;
 }

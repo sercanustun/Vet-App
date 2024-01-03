@@ -3,8 +3,6 @@ package dev.patika.vetapp.dto;
 import dev.patika.vetapp.base.City;
 import lombok.*;
 
-import java.util.List;
-
 @Getter
 @Setter
 @AllArgsConstructor
@@ -17,5 +15,4 @@ public class CustomerResponse {
     private String mail;
     private String address;
     private City city;
-    private List<AnimalWithoutRelations> animals;
 }
