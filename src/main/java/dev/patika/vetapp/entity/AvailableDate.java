@@ -1,6 +1,6 @@
 package dev.patika.vetapp.entity;
 
-import dev.patika.vetapp.base.BaseEntity;
+import dev.patika.vetapp.core.BaseEntity;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.JoinColumn;

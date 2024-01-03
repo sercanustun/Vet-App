@@ -1,6 +1,7 @@
 package dev.patika.vetapp.dto;
 
 import dev.patika.vetapp.entity.Doctor;
+import jakarta.validation.constraints.NotBlank;
 import lombok.*;
 
 import java.time.LocalDate;
@@ -11,6 +12,8 @@ import java.time.LocalDate;
 @NoArgsConstructor
 @Builder
 public class AvailableDateRequest {
+    @NotBlank
     private LocalDate date;
+    @NotBlank
     private Doctor doctor;
 }

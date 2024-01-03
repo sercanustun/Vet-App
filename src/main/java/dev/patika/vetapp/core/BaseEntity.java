@@ -1,4 +1,4 @@
-package dev.patika.vetapp.base;
+package dev.patika.vetapp.core;
 
 
 import jakarta.persistence.Column;
@@ -8,7 +8,6 @@ import lombok.*;
 import lombok.experimental.SuperBuilder;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
-import org.springframework.data.annotation.CreatedBy;
 
 import java.time.Instant;
 import java.util.UUID;

@@ -1,12 +1,8 @@
 package dev.patika.vetapp.dto;
 
-import dev.patika.vetapp.base.BaseEntity;
-import dev.patika.vetapp.base.City;
-import dev.patika.vetapp.entity.Animal;
-import jakarta.persistence.*;
+import dev.patika.vetapp.core.City;
+import jakarta.validation.constraints.NotBlank;
 import lombok.*;
-
-import java.util.List;
 
 @Getter
 @Setter
@@ -14,9 +10,14 @@ import java.util.List;
 @NoArgsConstructor
 @Builder
 public class CustomerRequest {
+    @NotBlank
     private String name;
+    @NotBlank
     private String phone;
+    @NotBlank
     private String mail;
+    @NotBlank
     private String address;
+    @NotBlank
     private City city;
 }

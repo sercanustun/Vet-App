@@ -1,4 +1,4 @@
-package dev.patika.vetapp.base;
+package dev.patika.vetapp.core;
 
 import org.mapstruct.IterableMapping;
 import org.mapstruct.MappingTarget;

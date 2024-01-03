@@ -1,4 +1,4 @@
-package dev.patika.vetapp.base;
+package dev.patika.vetapp.core;
 
 public enum City {
     ADANA(1),

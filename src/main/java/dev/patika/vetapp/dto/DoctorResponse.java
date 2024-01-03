@@ -1,6 +1,6 @@
 package dev.patika.vetapp.dto;
 
-import dev.patika.vetapp.base.City;
+import dev.patika.vetapp.core.City;
 import lombok.*;
 
 

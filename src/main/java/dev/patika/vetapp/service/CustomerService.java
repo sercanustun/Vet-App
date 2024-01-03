@@ -1,6 +1,6 @@
 package dev.patika.vetapp.service;
 
-import dev.patika.vetapp.base.BaseService;
+import dev.patika.vetapp.core.BaseService;
 import dev.patika.vetapp.dto.CustomerRequest;
 import dev.patika.vetapp.dto.CustomerResponse;
 import dev.patika.vetapp.entity.Customer;

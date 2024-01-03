@@ -1,6 +1,6 @@
 package dev.patika.vetapp.service;
 
-import dev.patika.vetapp.base.BaseService;
+import dev.patika.vetapp.core.BaseService;
 import dev.patika.vetapp.dto.AvailableDateRequest;
 import dev.patika.vetapp.dto.AvailableDateResponse;
 import dev.patika.vetapp.entity.AvailableDate;

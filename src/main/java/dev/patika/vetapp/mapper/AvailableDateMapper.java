@@ -1,6 +1,6 @@
 package dev.patika.vetapp.mapper;
 
-import dev.patika.vetapp.base.BaseMapper;
+import dev.patika.vetapp.core.BaseMapper;
 import dev.patika.vetapp.dto.AvailableDateRequest;
 import dev.patika.vetapp.dto.AvailableDateResponse;
 import dev.patika.vetapp.entity.AvailableDate;

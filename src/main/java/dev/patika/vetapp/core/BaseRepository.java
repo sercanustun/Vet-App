@@ -1,4 +1,4 @@
-package dev.patika.vetapp.base;
+package dev.patika.vetapp.core;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;

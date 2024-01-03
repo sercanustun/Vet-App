@@ -1,6 +1,6 @@
 package dev.patika.vetapp.mapper;
 
-import dev.patika.vetapp.base.BaseMapper;
+import dev.patika.vetapp.core.BaseMapper;
 import dev.patika.vetapp.dto.VaccineRequest;
 import dev.patika.vetapp.dto.VaccineResponse;
 import dev.patika.vetapp.entity.Vaccine;

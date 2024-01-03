@@ -1,4 +1,4 @@
-package dev.patika.vetapp.base;
+package dev.patika.vetapp.core;
 
 import dev.patika.vetapp.exception.EntityNotFoundException;
 import io.github.perplexhub.rsql.RSQLJPASupport;

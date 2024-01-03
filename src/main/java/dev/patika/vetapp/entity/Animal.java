@@ -1,7 +1,7 @@
 package dev.patika.vetapp.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import dev.patika.vetapp.base.BaseEntity;
+import dev.patika.vetapp.core.BaseEntity;
 import jakarta.persistence.*;
 import lombok.*;
 

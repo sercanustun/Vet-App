@@ -1,6 +1,6 @@
 package dev.patika.vetapp.service;
 
-import dev.patika.vetapp.base.BaseService;
+import dev.patika.vetapp.core.BaseService;
 import dev.patika.vetapp.dto.VaccineRequest;
 import dev.patika.vetapp.dto.VaccineResponse;
 import dev.patika.vetapp.entity.Vaccine;
@@ -24,7 +24,13 @@ public class VaccineService extends BaseService<Vaccine, VaccineRequest, Vaccine
 
     @Override
     public VaccineResponse create(VaccineRequest request) {
-        var isSameVaccineExist = vaccineRepository.findAllByAnimalIdAndCodeAndNameAndProtectionEndDateAfter(request.getAnimal().getId(), request.getCode(), request.getName(), request.getProtectionStartDate());
+
+        if (request.getProtectionEndDate().isBefore(request.getProtectionStartDate())) {
+            throw new IllegalArgumentException("Protection end date cannot be before protection start date!");
+        }
+
+        //minusDays(1) because if if vaccines enddate is today. You cant add new vaccine today.
+        var isSameVaccineExist = vaccineRepository.findAllByAnimalIdAndCodeAndNameAndProtectionEndDateAfter(request.getAnimal().getId(), request.getCode(), request.getName(), request.getProtectionStartDate().minusDays(1));
 
         if (isSameVaccineExist.isPresent()) {
             throw new IllegalArgumentException("This vaccine already exists!");
